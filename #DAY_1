@@ -1,1 +1,63 @@
-#DAY_1
+DAY_1
+
+# we will start with variables and different datatypes
+'''
+print(2+2)
+print(2-3)
+print(2*3)
+print(2/3)
+print(13%2)
+print(2**3)
+'''
+print("Hello World")
+print('Hello World')
+print("Hello 'W'orld")
+
+print("Hello World1")
+
+x=10
+y=10.2
+z=x+y
+a=2+3j
+
+print(type(x))
+print(type(y))
+print(type(z))
+print(type(a))
+
+# to work with comples mathematical functions we import the math library
+import math
+print(abs(a))
+print(math.sqrt(50))
+print(math.radians(x))
+print(math.sin(x))
+print(math.sin(math.radians(x)))
+print(math.sinh(x))
+
+#strings in python
+a = 'this is a string'
+print(a)
+
+b = a
+print(b[0:6])
+print(b[-2:6])
+print(b[1:6])
+print(b[:6])
+print(a+' '+b)
+
+#list in python
+a = [1,2,3,4,5]
+b = ['a','b','c','d','e']
+c = ['apple','banana','cat']
+d = ['apple','dog',7856, 43242]
+
+c[1] = 'apple'
+print(c)
+
+a.append(6)
+print(len(a))
+e = c.sort
+print(e)
+
+#HomeWork --- Write five uses of list with proper examples
+#HomeWork --- Write five programs using the math library
