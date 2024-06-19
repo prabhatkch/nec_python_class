@@ -60,4 +60,136 @@ e = c.sort
 print(e)
 
 #HomeWork --- Write five uses of list with proper examples
+Here are five different uses of lists in Python, each accompanied by a short example:
+
+1. Storing Multiple Items:
+Lists can store multiple items in a single variable. They can hold different data types.
+
+CODE:
+fruits = ["apple", "banana", "cherry"]
+print(fruits)
+
+OUTPUT:
+['apple', 'banana', 'cherry']
+
+2. Accessing Elements:
+You can access elements in a list by their index.
+
+CODE:
+fruits = ["apple", "banana", "cherry"]
+print(fruits[1])
+
+OUTPUT:
+banana
+
+3. Modifying Elements:
+Lists are mutable, meaning you can change their content.
+
+CODE:
+fruits = ["apple", "banana", "cherry"]
+fruits[1] = "blueberry"
+print(fruits)
+
+OUTPUT:
+['apple', 'blueberry', 'cherry']
+
+4. Appending Elements:
+You can add elements to the end of a list using the append() method.
+
+CODE:
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+print(fruits)
+
+OUTPUT:
+['apple', 'banana', 'cherry', 'orange']
+
+5. Iterating Through a List:
+You can loop through the items in a list using a for loop.
+
+CODE:
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+OUTPUT
+# apple
+# banana
+# cherry
+
+
 #HomeWork --- Write five programs using the math library
+
+Here are five programs using the Python math library, each illustrating a different function from the library:
+
+1. Calculating the Square Root:
+
+CODE:
+import math
+
+number = 16
+sqrt_value = math.sqrt(number)
+print(f"The square root of {number} is {sqrt_value}")
+
+OUTPUT:
+The square root of 16 is 4.0
+
+
+2. Finding the Greatest Common Divisor (GCD):
+
+CODE:
+import math
+
+num1 = 48
+num2 = 180
+gcd_value = math.gcd(num1, num2)
+print(f"The GCD of {num1} and {num2} is {gcd_value}")
+
+OUTPUT:
+The GCD of 48 and 180 is 12
+
+
+3. Calculating the Factorial:
+
+CODE:
+import math
+
+number = 5
+factorial_value = math.factorial(number)
+print(f"The factorial of {number} is {factorial_value}")
+
+OUTPUT:
+The factorial of 5 is 120
+
+
+4. Using Trigonometric Functions:
+
+CODE:
+import math
+
+angle_degrees = 30
+angle_radians = math.radians(angle_degrees)
+sine_value = math.sin(angle_radians)
+cosine_value = math.cos(angle_radians)
+print(f"sin({angle_degrees}°) is {sine_value}")
+print(f"cos({angle_degrees}°) is {cosine_value}")
+
+OUTPUT:
+# sin(30°) is 0.49999999999999994
+# cos(30°) is 0.8660254037844387
+
+
+5. Calculating the Exponential and Logarithm:
+
+CODE:
+import math
+
+number = 2
+exp_value = math.exp(number)
+log_value = math.log(exp_value)
+print(f"e^{number} is {exp_value}")
+print(f"log({exp_value}) is {log_value}")
+
+OUTPUT:
+# e^2 is 7.3890560989306495
+# log(7.3890560989306495) is 2.0
