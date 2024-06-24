@@ -1,0 +1,59 @@
+# simple Login form
+import tkinter as tk
+from tkinter import messagebox
+win= tk.Tk()
+win.title('LOGIN FORM')
+def login():
+    un= textbox_UN.get()
+    pw=textbox_PASS.get()
+    if un=='admin' and pw=='12345':
+        messagebox.showinfo('Login Success', 'Thank You Sir')
+    else:
+        messagebox.showerror('incorrect credintials')
+      
+
+
+win.geometry('250x250')
+
+label_UN=tk.Label(win,text='USERNAME')
+label_UN.grid(row=0, column=0, padx=20, pady=10)
+
+textbox_UN=tk.Entry(win)
+textbox_UN.grid(row=0, column=1, padx=20, pady=10)
+
+label_PASS=tk.Label(win,text='PASSWORD')
+label_PASS.grid(row=1, column=0, padx=20, pady=10)
+
+textbox_PASS=tk.Entry(win,show='*')
+textbox_PASS.grid(row=1, column=1, padx=20, pady=18)
+
+'''
+label_COMPASS=tk.Label(win,text='CONFIRM PASSOWRD')
+label_COMPASS.grid(row=2, column=0, padx=20, pady=10)
+
+textbox_COMPASS=tk.Entry(win,show='*')
+textbox_COMPASS.grid(row=2, column=1, padx=20, pady=18)
+
+label_MSGBOX=tk.Label(win,text='WRITE MESSAGE')
+label_MSGBOX.grid(row=3, column=0, padx=20, pady=10)
+
+textbox_MSGBOX=tk.Entry(win,show='*')
+textbox_MSGBOX.grid(row=3, column=1, padx=20, pady=18)'''
+
+def change_color():
+    colorVal = radio_var.get()
+    if colorVal == 1:
+        win.config(bg='#FF0000')
+    if colorVal == 2:
+        win.config(bg='#348646')
+
+radio_var=tk.IntVar()
+radioBtn = tk.Radiobutton(win, text='blue', variable=radio_var, value=1, command=change_color)
+radioBtn.grid(row=3, column=1, padx=20, pady=20)
+radioBtn = tk.Radiobutton(win, text='yellow', variable=radio_var, value=2, command=change_color)
+radioBtn.grid(row=4, column=1, padx=20, pady=20)
+
+btnlogin=tk.Button(win,text='LOGIN',bg='blue',fg='white',command=login)
+btnlogin.grid(row=5, column=1, padx=20, pady=18)
+
+win.mainloop()
