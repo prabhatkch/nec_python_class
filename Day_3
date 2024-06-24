@@ -1,0 +1,209 @@
+a= int(input('Enter the value of a: '))
+b= int(input('Enter the value of b: '))
+c= int(input('Enter the value of c: '))
+
+if a==b:
+    print('a is equal to b')
+elif a==c:
+    print('a is equal to c')
+elif b==a:
+    print('b is equal to a')
+elif b==c:
+    print('b is equal to c')
+elif c==a:
+    print('c is equal to a')
+elif c==b:
+    print('c is equal to b')
+elif a==b==c:
+    print('a,b and c is equal')
+
+           #OR
+
+    if a>b and a>c:
+     print('a is greater')
+
+     #using or
+     if a>b or a>c:
+         print('a is not a least number')
+
+         # not
+         if not(a<5):
+          print('a>=5')          
+
+-----------------------------------------------------------------------------------
+
+#Input three number and print which is greater
+
+'''a=int(input('Enter the value of a: '))
+b=int(input('Enter the value of b: '))
+c=int(input('Enter the value of c: '))
+
+if a>b and a>c:
+    print('the largest number is a')
+    result=print(a)
+
+elif b>a and b>c:
+     print('the largest number is b')
+     result=print(b)
+
+elif c>a and c>b:
+     print('the largest number is c')
+     result=print(c)
+
+     #this code in one line
+     largest= a if a>b and a>c else b if b>a and b>c else c'''
+
+     #Print day if number from 1 to 7 is enter
+number=int(input('Enter a number between 1 to 7'))
+days=('sun','mon','tues','wed','thrus','fri','sat')
+print('Day is',days[number-1]) if number<=7 else print('milena')
+
+-------------------------------------------------------------------------------------
+
+#Learning conditional statement
+
+#==
+#>=
+#<=
+#!=
+
+#if statement
+a=10
+b=20
+if b>a:
+    print('b is greater')
+
+
+
+
+#if-else statement
+#if-elif-else statement
+elif b==a:
+    print('a is equal to b')
+else:
+    print('a is greater than b')
+
+#nested if statement
+
+#short-cut
+result='a is greater' if a>b else 'b is greater'
+print(result)
+
+result2='a is greater' if a>b else 'b is greater' if b>a else'a is equal to b'
+print(result2)
+
+
+----------------------------------------------------------------------------------------------
+
+import tkinter as tk
+from tkinter import messagebox
+
+# Function to move selected fruit from bucket to sold bucket
+def sell_fruit():
+    selected_fruit = bucket_listbox.curselection()
+    if not selected_fruit:
+        messagebox.showwarning("No Selection", "Please select a fruit to sell.")
+        return
+
+    fruit = bucket_listbox.get(selected_fruit)
+    bucket_listbox.delete(selected_fruit)
+    sold_listbox.insert(tk.END, fruit)
+
+# Function to move selected fruit from sold bucket to bucket
+def buy_fruit():
+    selected_fruit = sold_listbox.curselection()
+    if not selected_fruit:
+        messagebox.showwarning("No Selection", "Please select a fruit to buy.")
+        return
+
+    fruit = sold_listbox.get(selected_fruit)
+    sold_listbox.delete(selected_fruit)
+    bucket_listbox.insert(tk.END, fruit)
+
+# Initialize main window
+root = tk.Tk()
+root.title("Fruit Bucket")
+
+# Create listboxes
+bucket_label = tk.Label(root, text="Bucket")
+bucket_label.grid(row=0, column=0)
+
+bucket_listbox = tk.Listbox(root, selectmode=tk.SINGLE)
+bucket_listbox.grid(row=1, column=0, padx=10, pady=10)
+
+sold_label = tk.Label(root, text="Sold Bucket")
+sold_label.grid(row=0, column=2)
+
+sold_listbox = tk.Listbox(root, selectmode=tk.SINGLE)
+sold_listbox.grid(row=1, column=2, padx=10, pady=10)
+
+# Add initial fruits to the bucket
+fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"]
+for fruit in fruits:
+    bucket_listbox.insert(tk.END, fruit)
+
+# Create buttons
+sell_button = tk.Button(root, text="Sell",bg='blue',fg='white', command=sell_fruit)
+sell_button.grid(row=1, column=1, padx=10)
+
+buy_button = tk.Button(root, text="Buy",bg='green',fg='white', command=buy_fruit)
+buy_button.grid(row=2, column=1, padx=10)
+
+# Start the main event loop
+root.mainloop()
+
+------------------------------------------------------------------------------------------
+
+# simple Login form
+import tkinter as tk
+win= tk.Tk()
+win.title('LOGIN FORM')
+def login():
+    un= textbox_UN.get()
+    if un=='Rajiv':
+        print('Logged in')
+    else:
+        print('incorrect username')
+      
+
+
+win.geometry('250x250')
+label_UN=tk.Label(win,text='USERNAME')
+label_UN.pack()
+textbox_UN=tk.Entry(win)
+textbox_UN.pack()
+label_PASS=tk.Label(win,text='PASSWORD')
+label_PASS.pack()
+textbox_PASS=tk.Entry(win,show='*')
+textbox_PASS.pack()
+btnlogin=tk.Button(win,text='LOGIN',bg='blue',fg='white',command=login)
+btnlogin.pack()
+win.mainloop()
+
+-----------------------------------------------------------------------------------------
+
+import tkinter as tk
+win= tk.Tk()
+win.title('Login form')
+win.geometry('300x300')
+
+def login():
+    un=textbox_UN.get()
+    if un=='Gargi':
+     print('Logged successfully')
+    else:
+        print('incorrect username')
+
+label_UN=tk.Label(win,text='USERNAME')
+label_UN.pack()
+textbox_UN=tk.Entry(win)
+textbox_UN.pack()
+label_PASS=tk.Label(win,text='PASSWORD')
+label_PASS.pack()
+textbox_PASS=tk.Entry(win,show='*')
+textbox_PASS.pack()
+btn_login=tk.Button(win,text='LOGIN',bg='blue',fg='white',command=login)
+btn_login.pack()
+
+
+win.mainloop()
