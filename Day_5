@@ -1,0 +1,81 @@
+#Learning while loop continue
+'''i=1
+while i<10:
+    print(i)
+    if i==5:
+        break
+    i +=1'''
+
+
+'''i= 0
+while i<10:
+        i +=1
+        if i==5:
+            continue 
+        print(i)
+
+
+        i=0
+        while i<10:
+            i +=1
+            print(i)
+        else:
+            print('saki sakyo')'''
+# Break le jaba jun condition diyeko hunxau tyo meet hunxa tyas paxi kehi print gardaina ya tyo loop chaldaina 
+# continue le jun condition diyeko hunxau like(i==3) ani yasle 3 print gardaina baki tyas paxi ko sabai print garxa
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+#fabonacci series
+n=int(input('Enter the count for fabonacci series'))
+count=0
+n1=0
+n2=1
+while count<n:
+    print(n1)
+    n3=n1+n2
+    n1=n2
+    n2=n3
+    count +=1
+
+
+
+#factorial series
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+#for loop
+
+'''fruits=['aple','banana','orange','litchi']
+for fruit in fruits:
+  print(fruits)'''
+
+
+# fruits=['aple','banana','orange','litchi']
+# for fruit in fruits:
+#   if fruit=='orange':
+#     print(fruit)
+
+
+
+'''fruits=['apple','banana','orange','litchi']
+for fruit in fruits:
+    if fruit =='banana':
+        continue
+    print(fruit)
+else:
+    print('cccccc')'''
+
+
+
+    #multiplication table
+num=int(input('Enter the number for multiplication table'))
+for i in range(1,11):
+        print(f'(num*i)',num*i)
+
+--------------------------------------------------------------------------------------------------------------------
+
