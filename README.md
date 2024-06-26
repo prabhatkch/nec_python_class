@@ -1,2 +1,2 @@
 # nec_python_class
-python class by sachin sherestha sir at Nepal Engineering College
+This is a python class conducted inside the premises of Nepal Engineering College under the mentorship of Prof. Sachin Shrestha.
